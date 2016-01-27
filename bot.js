@@ -10,7 +10,7 @@ function respond() {
       botRegexSalt = /^\/salt/;
       botRegexRules = /^\/rules/
       botRegexAd=/^\/advance/; 
-      botRegexsch = /^\/SDL/i; 
+      botRegexsc = /^\/SDL/i; 
       botODB = /(.*\s+)(.*odb)(\s+.*)/i; 
       botDucking = /^\/ducking/; 
       botRegexP = /^\/PDL/i;  
@@ -58,7 +58,7 @@ function respond() {
     postMessage("http://daddyleagues.com/ptp/rules");
     this.res.end();
   } 
-  else if(request.text && botRegexsch.test(request.text)) {
+  else if(request.text && botRegexsc.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/ptp/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();

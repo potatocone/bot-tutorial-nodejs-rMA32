@@ -23,6 +23,7 @@ function respond() {
       botRegexTits = /^\/tits/; 
       botRegexStayMaj = /^\/StayMaj/; 
       botRegexstaymaj = /^\/staymaj/; 
+      botRegexjose = /^\/jose's girl/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -112,6 +113,11 @@ function respond() {
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://i.imgur.com/MiSoSWp.jpg");
+    this.res.end();
+  }
+    else if(request.text && botRegexjose.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/236x316.jpeg.cded5dc6c9524c68b08461720f481a00.preview");
     this.res.end();
   }
   else if(request.text && botRegexStayMaj.test(request.text)) {

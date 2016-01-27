@@ -10,10 +10,10 @@ function respond() {
       botRegexSalt = /^\/salt/;
       botRegexRules = /^\/rules/
       botRegexAd=/^\/advance/; 
-      botRegexsch = /^\/sch/i; 
+      botRegexsch = /^\/SDL/i; 
       botODB = /(.*\s+)(.*odb)(\s+.*)/i; 
       botDucking = /^\/ducking/; 
-      botRegexP = /^\/player/i;  
+      botRegexP = /^\/PDL/i;  
       botRegexTw = /^\/twitch/i; 
       botRegexSb = /^\/sub/; 
       botRegexWk = /^\/users/; 

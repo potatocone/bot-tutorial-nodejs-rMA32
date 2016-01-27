@@ -23,6 +23,7 @@ function respond() {
       botRegexStayMaj = /^\/StayMaj/; 
       botRegexstaymaj = /^\/staymaj/; 
       botRegexjose = /^\/jose's girl/;
+      botRegexdaddy = /^\/call me daddy/;
       botRegexgkys = /^\/gkys/;
       botRegexcheese = /^\/cheese/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
@@ -127,6 +128,14 @@ function respond() {
       postMessage("https://i.groupme.com/500x477.png.51b13f3706b9414c85ad831ae4352361");
     else
       postMessage("https://i.groupme.com/400x400.gif.88ed0db90e6a4bfd937588d3ac09e66d")
+    this.res.end();
+  }
+  else if(request.text && botRegexdaddy.test(request.text)) {
+    this.res.writeHead(200);
+    if((Math.random() >0.6)
+      postMessage("https://upload.wikimedia.org/wikipedia/commons/f/f8/Tiger_Woods_drives_by_Allison.jpg");
+    else
+      postMessage("http://i.telegraph.co.uk/multimedia/archive/02265/tiger-woods_2265368b.jpg")
     this.res.end();
   }
   else if(request.text && botRegexStayMaj.test(request.text)) {

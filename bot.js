@@ -9,7 +9,8 @@ function respond() {
       botRegex = /^\/cool guy/; botRegexDL = /^\/DDL/i; botRegexSalt = /^\/salt/; botRegexRules = /^\/rules/
       botRegexAd=/^\/advance/; botRegexSC = /^\/SDL/i; botDuck = /^\/duck/; botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; 
       botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
-      botRegexSiege = /^\/siege/; botRegexTits = /^\/tits/;
+      botRegexSiege = /^\/siege/; botRegexTits = /^\/tits/; botRegexcheese = /^\/cheese/; botRegexStayMaj = /^\/StayMaj/; 
+      botRegexStayMaj = /^\/staymaj/; botRegexStayMaj = /^\/stay maj/; botRegexStayMaj = /^\/maj/; 
  
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
@@ -108,6 +109,30 @@ function respond() {
       postmessage("http://i.imgur.com/G5DkpRH.jpg");
     else
       postmessage("http://i.imgur.com/wnunRus.jpg");
+    this.res.end();
+  }
+  
+  else if(request.text && botRegexcheese.test(request.text)) {
+    this.res.writeHead(200);
+    if(0.75 >= Math.random() > 0.5)
+      postMessage("https://i.groupme.com/500x477.png.51b13f3706b9414c85ad831ae4352361");
+    else if(0.5 >= Math.random() > 0.25)
+      postMessage("https://i.groupme.com/400x400.gif.88ed0db90e6a4bfd937588d3ac09e66d");
+    else if(Math.random() >0.75)
+      postMessage("http://i.imgur.com/MQmtrNp.jpg")
+    else
+      postMessage("http://cdn.makeagif.com/media/1-24-2014/zaAiBl.gif");
+    this.res.end();
+  }
+  
+    else if(request.text && botRegexStayMaj.test(request.text)) {
+    this.res.writeHead(200);
+    if(0.75 >= Math.random() > 0.5)
+      postMessage("https://i.groupme.com/481x360.gif.631cf814f7324b59a74f695b9f4f23dd");
+    else if(Math.random() >0.75)
+      postMessage("https://i.groupme.com/920x701.jpeg.5f98e28dab5a4b7ca34696bd637869b9");
+    else
+      postMessage("https://i.groupme.com/574x834.jpeg.9496ab28563842849d906938dfc4ee47");
     this.res.end();
   }
   

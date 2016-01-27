@@ -29,7 +29,12 @@ function respond() {
   } 
   else if(request.text && botRegexSalt.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.imgur.com/B5BSVqH.png");
+    if(0.8 >= Math.random() > 0.6)
+      postMessage("http://www.kappit.com/img/pics/201503_1020_iceia_sm.jpg");
+    else if(Math.random() >0.8)
+      postMessage("http://www.kappit.com/img/pics/201503_1020_dgcga_sm.jpg")
+    else
+      postMessage("http://i.imgur.com/Bnw1iln.jpg");
     this.res.end();
   } 
   else if(request.text && botRegexAd.test(request.text)) {

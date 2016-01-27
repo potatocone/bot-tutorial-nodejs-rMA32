@@ -25,6 +25,8 @@ function respond() {
       botRegexdaddy = /^\/call me daddy/;
       botRegexgkys = /^\/gkys/;
       botRegexcheese = /^\/cheese/;
+      botRegexboot = /^\/boot/;
+      botRegexDLL = /^\/dl/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -75,6 +77,11 @@ function respond() {
     postMessage("http://www.twitch.tv/"+request.text.substring(8,request.text.length));
     this.res.end();
   } 
+  else if(request.text && botRegexDLL.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://www.daddyleagues.com/ptp");
+    this.res.end();
+  } 
   else if(request.text && botDucking.test(request.text)) {
     this.res.writeHead(200);
    if(0.6 >= Math.random() > 0.3)
@@ -107,13 +114,25 @@ function respond() {
   }
   else if(request.text && botRegexcheese.test(request.text)) {
     this.res.writeHead(200);
-    if(Math.random() >0.6)
+    if(0.75 >= Math.random() > 0.5)
       postMessage("https://i.groupme.com/500x477.png.51b13f3706b9414c85ad831ae4352361");
-    else
+    else if(0.5 >= Math.random() > 0.25)
       postMessage("https://i.groupme.com/400x400.gif.88ed0db90e6a4bfd937588d3ac09e66d")
+    else if(Math.random() >0.75)
+      postMessage("http://i.imgur.com/MQmtrNp.jpg")
+    else
+      postMessage("http://cdn.makeagif.com/media/1-24-2014/zaAiBl.gif")
     this.res.end();
   }
   else if(request.text && botRegexdaddy.test(request.text)) {
+    this.res.writeHead(200);
+    if(Math.random() >0.6)
+      postMessage("https://upload.wikimedia.org/wikipedia/commons/f/f8/Tiger_Woods_drives_by_Allison.jpg");
+    else
+      postMessage("http://i.telegraph.co.uk/multimedia/archive/02265/tiger-woods_2265368b.jpg")
+    this.res.end();
+  }
+  else if(request.text && botRegexboot.test(request.text)) {
     this.res.writeHead(200);
     if(Math.random() >0.6)
       postMessage("https://upload.wikimedia.org/wikipedia/commons/f/f8/Tiger_Woods_drives_by_Allison.jpg");

@@ -5,15 +5,24 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
-      botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; 
-      botDuck = /^\/duck/; botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; 
-      botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
-      botRegexSiege = /^\/siege/; botRegexTits = /^\/tits/; botRegexStayMaj = /^\/StayMaj/; 
+      botRegex = /^\/cool guy/; 
+      botRegexDL = /^\/DDL/i;
+      botRegexSalt = /^\/salt/;
+      botRegexRules = /^\/rules/
+      botRegexAd=/^\/advance/; 
+      botRegexSC = /^\/SDL/i; 
+      botODB = /(.*\s+)(.*odb)(\s+.*)/i; 
+      botDuck = /^\/duck/; 
+      botRegexP = /^\/PDL/i;  
+      botRegexTw = /^\/twitch/i; 
+      botRegexSb = /^\/sub/; 
+      botRegexSh = /^\/shrug/; 
+      botRegexWk = /^\/users/; 
+      botRegexCC = /^\/cc/;
+      botRegexSiege = /^\/siege/; 
+      botRegexTits = /^\/tits/; 
+      botRegexStayMaj = /^\/StayMaj/; 
       botRegexstaymaj = /^\/staymaj/; 
-      siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; 
-      siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
-      siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -44,12 +53,7 @@ function respond() {
   }
   else if(request.text && botRegexRules.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.google.com/document/d/1hSuEG7oplnx4IX6HGsMOjsWb9TCqC4-F1NLjuBz5PCM/edit");
-    this.res.end();
-  } 
-  else if(request.text && botRegexGTA.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://i.groupme.com/220x147.jpeg.a2dd2add32b14fff9e329535186d793c.large");
+    postMessage("http://daddyleagues.com/ptp/rules");
     this.res.end();
   } 
   else if(request.text && botRegexSC.test(request.text)) {
@@ -128,11 +132,11 @@ function respond() {
   else if(request.text && botRegexSiege.test(request.text)) {
     this.res.writeHead(200);
     if(0.6 >= Math.random() > 0.3)
-      postMessage(siege1);
+      postMessage("https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8");
     else if(Math.random() >0.6)
-      postMessage(siege3)
+      postMessage("https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7")
     else
-      postMessage(siege2);
+      postMessage("https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd");
     this.res.end();
   }
   

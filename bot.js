@@ -10,13 +10,12 @@ function respond() {
       botRegexSalt = /^\/salt/;
       botRegexRules = /^\/rules/
       botRegexAd=/^\/advance/; 
-      botRegexSC = /^\/SDL/i; 
+      botRegexsch = /^\/sch/i; 
       botODB = /(.*\s+)(.*odb)(\s+.*)/i; 
       botDucking = /^\/ducking/; 
-      botRegexP = /^\/PDL/i;  
+      botRegexP = /^\/player/i;  
       botRegexTw = /^\/twitch/i; 
       botRegexSb = /^\/sub/; 
-      botRegexSh = /^\/shrug/; 
       botRegexWk = /^\/users/; 
       botRegexCC = /^\/cc/;
       botRegexSiege = /^\/siege/; 
@@ -59,7 +58,7 @@ function respond() {
     postMessage("http://daddyleagues.com/ptp/rules");
     this.res.end();
   } 
-  else if(request.text && botRegexSC.test(request.text)) {
+  else if(request.text && botRegexsch.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/ptp/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();
@@ -80,11 +79,6 @@ function respond() {
   else if(request.text && botRegexSb.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://www.reddit.com/r/nsfw");
-    this.res.end();
-  } 
-  else if(request.text && botRegexSh.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("¯\\_(ツ)_/¯");
     this.res.end();
   } 
   else if(request.text && botRegexWk.test(request.text)) {

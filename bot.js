@@ -92,7 +92,7 @@ function respond() {
     if(0.6 >= Math.random() > 0.3)
       postMessage("http://media3.giphy.com/media/YCseTHF2I6CCA/giphy.gif");
     else if(Math.random() >0.6)
-      postMessage("https://i.groupme.com/320x180.gif.53776560c9984fd59608c337274b0ff8")
+      postMessage("https://i.groupme.com/320x180.gif.53776560c9984fd59608c337274b0ff8");
     else
       postMessage("https://i.groupme.com/480x360.gif.6baceb3ecda143918edb0fc35b036b46");
     this.res.end();
@@ -102,21 +102,21 @@ function respond() {
     if(0.9 >= Math.random() > 0.8)
       postMessage("http://i.imgur.com/MiSoSWp.jpg");
     else if(Math.random() > 0.9)
-      postMessage("http://i.imgur.com/kSadnk8.jpg")
+      postMessage("http://i.imgur.com/kSadnk8.jpg");
     else if(0.8 >= Math.random() > 0.7)
       postMessage("http://i.imgur.com/4JCb63o.jpg");
     else if(0.7 >= Math.random() > 0.6)
-      postMessage("http://i.imgur.com/F2vcuNf.jpg")
+      postMessage("http://i.imgur.com/F2vcuNf.jpg");
     else if(0.6 >= Math.random() > 0.5)
-      postMessage("http://i.imgur.com/0RE6wLK.jpg") 
+      postMessage("http://i.imgur.com/0RE6wLK.jpg"); 
     else if(0.5 >= Math.random() > 0.4)
-      postMessage("http://i.imgur.com/znjGVxG.jpg")
+      postMessage("http://i.imgur.com/znjGVxG.jpg");
     else if(0.3 >= Math.random() > 0.2)
-      postMessage("http://i.imgur.com/zA5taR3.jpg")
+      postMessage("http://i.imgur.com/zA5taR3.jpg");
     else if(0.2 >= Math.random() > 0.1)
-      postmessage("http://i.imgur.com/G5DkpRH.jpg")
+      postmessage("http://i.imgur.com/G5DkpRH.jpg");
     else
-      postmessage("http://i.imgur.com/wnunRus.jpg")
+      postmessage("http://i.imgur.com/wnunRus.jpg");
     this.res.end();
   }
   else if(request.text && botRegexjose.test(request.text)) {
@@ -139,11 +139,11 @@ function respond() {
     if(0.75 >= Math.random() > 0.5)
       postMessage("https://i.groupme.com/500x477.png.51b13f3706b9414c85ad831ae4352361");
     else if(0.5 >= Math.random() > 0.25)
-      postMessage("https://i.groupme.com/400x400.gif.88ed0db90e6a4bfd937588d3ac09e66d")
+      postMessage("https://i.groupme.com/400x400.gif.88ed0db90e6a4bfd937588d3ac09e66d");
     else if(Math.random() >0.75)
       postMessage("http://i.imgur.com/MQmtrNp.jpg")
     else
-      postMessage("http://cdn.makeagif.com/media/1-24-2014/zaAiBl.gif")
+      postMessage("http://cdn.makeagif.com/media/1-24-2014/zaAiBl.gif");
     this.res.end();
   }
   else if(request.text && botRegexDeal.test(request.text)) {
@@ -151,9 +151,9 @@ function respond() {
     if(0.75 >= Math.random() > 0.5)
       postMessage("https://i.imgur.com/C9aUdh.jpg");
     else if(0.5 >= Math.random() > 0.25)
-      postMessage("https://heavyeditorial.files.wordpress.com/2014/03/jackson.gif?w=500")
+      postMessage("https://heavyeditorial.files.wordpress.com/2014/03/jackson.gif?w=500");
     else if(Math.random() >0.75)
-      postMessage("https://heavyeditorial.files.wordpress.com/2014/03/deal-with-it23.gif")
+      postMessage("https://heavyeditorial.files.wordpress.com/2014/03/deal-with-it23.gif");
     else
       postMessage("https://heavyeditorial.files.wordpress.com/2014/03/deal-with-it-bra.gif")
     this.res.end();
@@ -163,7 +163,7 @@ function respond() {
     if(Math.random() >0.6)
       postMessage("https://upload.wikimedia.org/wikipedia/commons/f/f8/Tiger_Woods_drives_by_Allison.jpg");
     else
-      postMessage("http://i.telegraph.co.uk/multimedia/archive/02265/tiger-woods_2265368b.jpg")
+      postMessage("http://i.telegraph.co.uk/multimedia/archive/02265/tiger-woods_2265368b.jpg");
     this.res.end();
   }
   else if(request.text && botRegexboot.test(request.text)) {
@@ -171,7 +171,7 @@ function respond() {
     if(Math.random() >0.6)
       postMessage("https://upload.wikimedia.org/wikipedia/commons/f/f8/Tiger_Woods_drives_by_Allison.jpg");
     else
-      postMessage("http://i.telegraph.co.uk/multimedia/archive/02265/tiger-woods_2265368b.jpg")
+      postMessage("http://i.telegraph.co.uk/multimedia/archive/02265/tiger-woods_2265368b.jpg");
     this.res.end();
   }
   else if(request.text && botRegexStayMaj.test(request.text)) {

@@ -100,11 +100,11 @@ function respond() {
   else if(request.text && botRegexStayMaj.test(request.text)) {
     this.res.writeHead(200);
     if(0.6 >= Math.random() > 0.3)
-      postMessage(https://i.groupme.com/481x360.gif.631cf814f7324b59a74f695b9f4f23dd);
+      postMessage("https://i.groupme.com/481x360.gif.631cf814f7324b59a74f695b9f4f23dd");
     else if(Math.random() >0.6)
-      postMessage(https://i.groupme.com/920x701.jpeg.5f98e28dab5a4b7ca34696bd637869b9);
+      postMessage("https://i.groupme.com/920x701.jpeg.5f98e28dab5a4b7ca34696bd637869b9");
     else
-      postMessage(https://i.groupme.com/574x834.jpeg.9496ab28563842849d906938dfc4ee47);
+      postMessage("https://i.groupme.com/574x834.jpeg.9496ab28563842849d906938dfc4ee47");
     this.res.end();
   }
   else if(request.text && botRegexSiege.test(request.text)) {

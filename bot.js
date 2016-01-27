@@ -9,7 +9,7 @@ function respond() {
       botRegex = /^\/cool guy/; botRegexDL = /^\/DDL/i; botRegexSalt = /^\/salt/; botRegexRules = /^\/rules/
       botRegexAd=/^\/advance/; botRegexSC = /^\/SDL/i; botDuck = /^\/duck/; botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; 
       botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
-      botRegexSiege = /^\/siege/;
+      botRegexSiege = /^\/siege/; botRegexTits = /^\/tits/;
  
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
@@ -85,6 +85,29 @@ function respond() {
       postMessage("https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7")
     else
       postMessage("https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd");
+    this.res.end();
+  }
+  
+  else if(request.text && botRegexTits.test(request.text)) {
+    this.res.writeHead(200);
+    if(0.9 >= Math.random() > 0.8)
+      postMessage("http://i.imgur.com/MiSoSWp.jpg");
+    else if(Math.random() > 0.9)
+      postMessage("http://i.imgur.com/kSadnk8.jpg");
+    else if(0.8 >= Math.random() > 0.7)
+      postMessage("http://i.imgur.com/4JCb63o.jpg");
+    else if(0.7 >= Math.random() > 0.6)
+      postMessage("http://i.imgur.com/F2vcuNf.jpg");
+    else if(0.6 >= Math.random() > 0.5)
+      postMessage("http://i.imgur.com/0RE6wLK.jpg"); 
+    else if(0.5 >= Math.random() > 0.4)
+      postMessage("http://i.imgur.com/znjGVxG.jpg");
+    else if(0.3 >= Math.random() > 0.2)
+      postMessage("http://i.imgur.com/zA5taR3.jpg");
+    else if(0.2 >= Math.random() > 0.1)
+      postmessage("http://i.imgur.com/G5DkpRH.jpg");
+    else
+      postmessage("http://i.imgur.com/wnunRus.jpg");
     this.res.end();
   }
   

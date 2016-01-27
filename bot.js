@@ -5,31 +5,12 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/; 
-      botRegexDL = /^\/DDL/i;
-      botRegexSalt = /^\/salt/;
-      botRegexRules = /^\/rules/
-      botRegexAd=/^\/advance/; 
-      botRegexAd=/^\/vance/; 
-      botRegexsc = /^\/SDL/i; 
-      botDucking = /^\/ducking/; 
-      botRegexP = /^\/PDL/i;  
-      botRegexTw = /^\/twitch/i; 
-      botRegexSiege = /^\/siege/; 
-      botRegexTits = /^\/tits/; 
-      botRegexStayMaj = /^\/StayMaj/; 
-      botRegexstaymaj = /^\/staymaj/; 
-      botRegexstaymaj = /^\/stay maj/; 
-      botRegexmaj = /^\/maj/; 
-      botRegexjose = /^\/jose's girl/;
-      botRegexdaddy = /^\/call me daddy/;
-      botRegexgkys = /^\/gkys/;
-      botRegexcheese = /^\/cheese/;
-      botRegexboot = /^\/boot/;
-      botRegexDLL = /^\/dl/;
-      botRegexethan = /^\/ethan/;
-      botRegexBeatit = /^\/beatit/;
-      botRegexDeal = /^\/dealwithit/;
+      botRegex = /^\/cool guy/; botRegexDL = /^\/DDL/i; botRegexSalt = /^\/salt/; botRegexRules = /^\/rules/; botRegexAd=/^\/advance/; 
+      botRegexAd=/^\/vance/; botRegexsc = /^\/SDL/i; botDucking = /^\/ducking/; botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; 
+      botRegexSiege = /^\/siege/; botRegexTits = /^\/tits/; botRegexStayMaj = /^\/StayMaj/; botRegexstaymaj = /^\/staymaj/; 
+      botRegexstaymaj = /^\/stay maj/; botRegexmaj = /^\/maj/; botRegexjose = /^\/jose's girl/; botRegexdaddy = /^\/call me daddy/;
+      botRegexgkys = /^\/gkys/; botRegexcheese = /^\/cheese/; botRegexboot = /^\/boot/; botRegexDLL = /^\/dl/; botRegexethan = /^\/ethan/;
+      botRegexBeatit = /^\/beatit/; botRegexDeal = /^\/dealwithit/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -102,17 +83,17 @@ function respond() {
   }
   else if(request.text && botRegexjose.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/236x316.jpeg.cded5dc6c9524c68b08461720f481a00");
+      postMessage("https://i.groupme.com/236x316.jpeg.cded5dc6c9524c68b08461720f481a00");
     this.res.end();
   }
   else if(request.text && botRegexethan.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/1609x2250.jpeg.0ff61195e1ac46cfa9e42c748d434a02");
+      postMessage("https://i.groupme.com/1609x2250.jpeg.0ff61195e1ac46cfa9e42c748d434a02");
     this.res.end();
   }
   else if(request.text && botRegexgkys.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/250x188.gif.023685f596164cbc96e9c78ee7c2eb3c");
+      postMessage("https://i.groupme.com/250x188.gif.023685f596164cbc96e9c78ee7c2eb3c");
     this.res.end();
   }
   else if(request.text && botRegexcheese.test(request.text)) {

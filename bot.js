@@ -99,21 +99,21 @@ function respond() {
   }
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
-    if(0.9 >= Math.Random() > 0.8)
+    if(0.9 >= Math.random() > 0.8)
       postMessage("http://i.imgur.com/MiSoSWp.jpg");
-    else if(Math.Random() > 0.9)
+    else if(Math.random() > 0.9)
       postMessage("http://i.imgur.com/kSadnk8.jpg")
-    else if(0.8 >= Math.Random() > 0.7)
+    else if(0.8 >= Math.random() > 0.7)
       postMessage("http://i.imgur.com/4JCb63o.jpg");
-    else if(0.7 >= Math.Random() > 0.6)
+    else if(0.7 >= Math.random() > 0.6)
       postMessage("http://i.imgur.com/F2vcuNf.jpg")
-    else if(0.6 >= Math.Random() > 0.5)
+    else if(0.6 >= Math.random() > 0.5)
       postMessage("http://i.imgur.com/0RE6wLK.jpg") 
-    else if(0.5 >= Math.Random() > 0.4)
+    else if(0.5 >= Math.random() > 0.4)
       postMessage("http://i.imgur.com/znjGVxG.jpg")
-    else if(0.3 >= Math.Random() > 0.2)
+    else if(0.3 >= Math.random() > 0.2)
       postMessage("http://i.imgur.com/zA5taR3.jpg")
-    else if(0.2 >= Math.Random() > 0.1)
+    else if(0.2 >= Math.random() > 0.1)
       postmessage("http://i.imgur.com/G5DkpRH.jpg")
     else
       postmessage("http://i.imgur.com/wnunRus.jpg")

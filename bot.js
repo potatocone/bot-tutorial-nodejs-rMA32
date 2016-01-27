@@ -12,7 +12,7 @@ function respond() {
       botRegexAd=/^\/advance/; 
       botRegexSC = /^\/SDL/i; 
       botODB = /(.*\s+)(.*odb)(\s+.*)/i; 
-      botDuck = /^\/ducking/; 
+      botDucking = /^\/ducking/; 
       botRegexP = /^\/PDL/i;  
       botRegexTw = /^\/twitch/i; 
       botRegexSb = /^\/sub/; 

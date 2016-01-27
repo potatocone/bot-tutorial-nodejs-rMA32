@@ -22,7 +22,6 @@ function respond() {
       botRegexstaymaj = /^\/stay maj/; 
       botRegexmaj = /^\/maj/; 
       botRegexjose = /^\/jose's girl/;
-      botRegexjose = /^\/joses girl/;
       botRegexdaddy = /^\/call me daddy/;
       botRegexgkys = /^\/gkys/;
       botRegexcheese = /^\/cheese/;
@@ -31,7 +30,6 @@ function respond() {
       botRegexethan = /^\/ethan/;
       botRegexBeatit = /^\/beatit/;
       botRegexDeal = /^\/dealwithit/;
-      botRegexDeal = /^\/dealwitit/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]

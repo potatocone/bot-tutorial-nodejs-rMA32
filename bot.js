@@ -10,11 +10,11 @@ function respond() {
       botRegexSalt = /^\/salt/;
       botRegexRules = /^\/rules/
       botRegexAd=/^\/advance/; 
+      botRegexAd=/^\/vance/; 
       botRegexsc = /^\/SDL/i; 
       botDucking = /^\/ducking/; 
       botRegexP = /^\/PDL/i;  
       botRegexTw = /^\/twitch/i; 
-      botRegexCC = /^\/cc/;
       botRegexSiege = /^\/siege/; 
       botRegexTits = /^\/tits/; 
       botRegexStayMaj = /^\/StayMaj/; 
@@ -22,6 +22,7 @@ function respond() {
       botRegexstaymaj = /^\/stay maj/; 
       botRegexmaj = /^\/maj/; 
       botRegexjose = /^\/jose's girl/;
+      botRegexjose = /^\/joses girl/;
       botRegexdaddy = /^\/call me daddy/;
       botRegexgkys = /^\/gkys/;
       botRegexcheese = /^\/cheese/;
@@ -86,7 +87,7 @@ function respond() {
   } 
   else if(request.text && botDucking.test(request.text)) {
     this.res.writeHead(200);
-   if(0.6 >= Math.random() > 0.3)
+    if(0.6 >= Math.random() > 0.3)
       postMessage("http://media3.giphy.com/media/YCseTHF2I6CCA/giphy.gif");
     else if(Math.random() >0.6)
       postMessage("https://i.groupme.com/320x180.gif.53776560c9984fd59608c337274b0ff8")
@@ -94,14 +95,26 @@ function respond() {
       postMessage("https://i.groupme.com/480x360.gif.6baceb3ecda143918edb0fc35b036b46");
     this.res.end();
   }
-  else if(request.text && botRegexCC.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://i.groupme.com/851x1184.jpeg.330228901f684b0cb46cd1cef6953923");
-    this.res.end();
-  }
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://i.imgur.com/MiSoSWp.jpg");
+    if(0.9 >= Math.Random() > 0.8)
+      postMessage("http://i.imgur.com/MiSoSWp.jpg");
+    else if(Math.Random() > 0.9)
+      postMessage("http://i.imgur.com/kSadnk8.jpg")
+    else if(0.8 >= Math.Random() > 0.7)
+      postMessage("http://i.imgur.com/4JCb63o.jpg");
+    else if(0.7 >= Math.Random() > 0.6)
+      postMessage("http://i.imgur.com/F2vcuNf.jpg")
+    else if(0.6 >= Math.Random() > 0.5)
+      postMessage("http://i.imgur.com/0RE6wLK.jpg") 
+    else if(0.5 >= Math.Random() > 0.4)
+      postMessage("http://i.imgur.com/znjGVxG.jpg")
+    else if(0.3 >= Math.Random() > 0.2)
+      postMessage("http://i.imgur.com/zA5taR3.jpg")
+    else if(0.2 >= Math.Random() > 0.1)
+      postmessage("http://i.imgur.com/G5DkpRH.jpg")
+    else
+      postmessage("http://i.imgur.com/wnunRus.jpg")
     this.res.end();
   }
   else if(request.text && botRegexjose.test(request.text)) {

@@ -27,6 +27,7 @@ function respond() {
       botRegexcheese = /^\/cheese/;
       botRegexboot = /^\/boot/;
       botRegexDLL = /^\/dl/;
+      botRegexethan = /^\/ethan/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -104,7 +105,12 @@ function respond() {
   }
   else if(request.text && botRegexjose.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/236x316.jpeg.cded5dc6c9524c68b08461720f481a00.preview");
+    postMessage("https://i.groupme.com/236x316.jpeg.cded5dc6c9524c68b08461720f481a00");
+    this.res.end();
+  }
+  else if(request.text && botRegexethan.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/1609x2250.jpeg.0ff61195e1ac46cfa9e42c748d434a02");
     this.res.end();
   }
   else if(request.text && botRegexgkys.test(request.text)) {

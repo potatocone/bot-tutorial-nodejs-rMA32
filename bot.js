@@ -12,7 +12,7 @@ function respond() {
       botRegexAd=/^\/advance/; 
       botRegexSC = /^\/SDL/i; 
       botODB = /(.*\s+)(.*odb)(\s+.*)/i; 
-      botDuck = /^\/duck/; 
+      botDuck = /^\/ducking/; 
       botRegexP = /^\/PDL/i;  
       botRegexTw = /^\/twitch/i; 
       botRegexSb = /^\/sub/; 
@@ -94,9 +94,14 @@ function respond() {
     postMessage("OBJ*");
     this.res.end();
   } 
-  else if(request.text && botDuck.test(request.text)) {
+  else if(request.text && botDucking.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://media3.giphy.com/media/YCseTHF2I6CCA/giphy.gif");
+   if(0.6 >= Math.random() > 0.3)
+      postMessage("http://media3.giphy.com/media/YCseTHF2I6CCA/giphy.gif");
+    else if(Math.random() >0.6)
+      postMessage("https://i.groupme.com/320x180.gif.53776560c9984fd59608c337274b0ff8")
+    else
+      postMessage("https://i.groupme.com/480x360.gif.6baceb3ecda143918edb0fc35b036b46");
     this.res.end();
   }
   else if(request.text && botRegexCC.test(request.text)) {

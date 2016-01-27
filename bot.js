@@ -30,6 +30,8 @@ function respond() {
       botRegexDLL = /^\/dl/;
       botRegexethan = /^\/ethan/;
       botRegexBeatit = /^\/beatit/;
+      botRegexDeal = /^\/dealwithit/;
+      botRegexDeal = /^\/dealwitit/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -142,6 +144,18 @@ function respond() {
       postMessage("http://i.imgur.com/MQmtrNp.jpg")
     else
       postMessage("http://cdn.makeagif.com/media/1-24-2014/zaAiBl.gif")
+    this.res.end();
+  }
+  else if(request.text && botRegexDeal.test(request.text)) {
+    this.res.writeHead(200);
+    if(0.75 >= Math.random() > 0.5)
+      postMessage("https://i.imgur.com/C9aUdh.jpg");
+    else if(0.5 >= Math.random() > 0.25)
+      postMessage("https://heavyeditorial.files.wordpress.com/2014/03/jackson.gif?w=500")
+    else if(Math.random() >0.75)
+      postMessage("https://heavyeditorial.files.wordpress.com/2014/03/deal-with-it23.gif")
+    else
+      postMessage("https://heavyeditorial.files.wordpress.com/2014/03/deal-with-it-bra.gif")
     this.res.end();
   }
   else if(request.text && botRegexdaddy.test(request.text)) {

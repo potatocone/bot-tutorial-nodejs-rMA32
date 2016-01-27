@@ -9,8 +9,8 @@ function respond() {
       botRegex = /^\/cool guy/; botRegexDL = /^\/DDL/i; botRegexSalt = /^\/salt/; botRegexRules = /^\/rules/
       botRegexAd=/^\/advance/; botRegexSC = /^\/SDL/i; botDuck = /^\/duck/; botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; 
       botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
-      botRegexSiege = /^\/siege/; botRegexTits = /^\/tits/; botRegexcheese = /^\/cheese/; botRegexStayMaj = /^\/StayMaj/; 
-      botRegexStayMaj = /^\/staymaj/; botRegexStayMaj = /^\/stay maj/; botRegexStayMaj = /^\/maj/; 
+      botRegexSiege = /^\/siege/; botRegexTits = /^\/tits/; botRegexcheese = /^\/cheese/; botRegexStayMaj = /^\/staymaj/; 
+      botRegexmaj = /^\/stay maj/; 
  
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
@@ -126,6 +126,17 @@ function respond() {
   }
   
     else if(request.text && botRegexStayMaj.test(request.text)) {
+    this.res.writeHead(200);
+    if(0.75 >= Math.random() > 0.5)
+      postMessage("https://i.groupme.com/481x360.gif.631cf814f7324b59a74f695b9f4f23dd");
+    else if(Math.random() >0.75)
+      postMessage("https://i.groupme.com/920x701.jpeg.5f98e28dab5a4b7ca34696bd637869b9");
+    else
+      postMessage("https://i.groupme.com/574x834.jpeg.9496ab28563842849d906938dfc4ee47");
+    this.res.end();
+  }
+  
+  else if(request.text && botRegexmaj.test(request.text)) {
     this.res.writeHead(200);
     if(0.75 >= Math.random() > 0.5)
       postMessage("https://i.groupme.com/481x360.gif.631cf814f7324b59a74f695b9f4f23dd");

@@ -19,6 +19,8 @@ function respond() {
       botRegexTits = /^\/tits/; 
       botRegexStayMaj = /^\/StayMaj/; 
       botRegexstaymaj = /^\/staymaj/; 
+      botRegexstaymaj = /^\/stay maj/; 
+      botRegexmaj = /^\/maj/; 
       botRegexjose = /^\/jose's girl/;
       botRegexdaddy = /^\/call me daddy/;
       botRegexgkys = /^\/gkys/;
@@ -120,6 +122,16 @@ function respond() {
     this.res.end();
   }
   else if(request.text && botRegexStayMaj.test(request.text)) {
+    this.res.writeHead(200);
+    if(0.75 >= Math.random() > 0.5)
+      postMessage("https://i.groupme.com/481x360.gif.631cf814f7324b59a74f695b9f4f23dd");
+    else if(Math.random() >0.75)
+      postMessage("https://i.groupme.com/920x701.jpeg.5f98e28dab5a4b7ca34696bd637869b9");
+    else
+      postMessage("https://i.groupme.com/574x834.jpeg.9496ab28563842849d906938dfc4ee47");
+    this.res.end();
+  }
+  else if(request.text && botRegexmaj.test(request.text)) {
     this.res.writeHead(200);
     if(0.75 >= Math.random() > 0.5)
       postMessage("https://i.groupme.com/481x360.gif.631cf814f7324b59a74f695b9f4f23dd");

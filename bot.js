@@ -124,7 +124,7 @@ function respond() {
   }
   else if(request.text && botRegexcheese.test(request.text)) {
     this.res.writeHead(200);
-    if((Math.random() >0.6)
+    if(Math.random() >0.6)
       postMessage("https://i.groupme.com/500x477.png.51b13f3706b9414c85ad831ae4352361");
     else
       postMessage("https://i.groupme.com/400x400.gif.88ed0db90e6a4bfd937588d3ac09e66d")
@@ -132,7 +132,7 @@ function respond() {
   }
   else if(request.text && botRegexdaddy.test(request.text)) {
     this.res.writeHead(200);
-    if((Math.random() >0.6)
+    if(Math.random() >0.6)
       postMessage("https://upload.wikimedia.org/wikipedia/commons/f/f8/Tiger_Woods_drives_by_Allison.jpg");
     else
       postMessage("http://i.telegraph.co.uk/multimedia/archive/02265/tiger-woods_2265368b.jpg")

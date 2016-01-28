@@ -10,7 +10,7 @@ function respond() {
       botRegexAd=/^\/advance/; botRegexSC = /^\/SDL/i; botDuck = /^\/duck/; botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; 
       botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexSiege = /^\/siege/; botRegexTits = /^\/tits/; botRegexcheese = /^\/cheese/; botRegexStayMaj = /^\/staymaj/; 
-      botRegexmaj = /^\/stay maj/; botRegexBeatit = /^\/beatit/;
+      botRegexmaj = /^\/stay maj/; botRegexBeatit = /^\/beatit/; botRegexTits2 = /^\/tits2/; botRegexTits3 = /^\/tits3/;
  
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
@@ -123,7 +123,7 @@ function respond() {
     this.res.end();
   }
   
-  else if(request.text && botRegexTits2.test(request.text)) {
+  else if(request.text && botRegexTits3.test(request.text)) {
     this.res.writeHead(200);
     if(0.75 >= Math.random() > 0.5)
         postmessage("http://i.imgur.com/G5DkpRH.jpg");

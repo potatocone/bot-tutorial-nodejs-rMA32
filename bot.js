@@ -10,7 +10,7 @@ function respond() {
       botRegexAd=/^\/advance/; botRegexSC = /^\/SDL/i; botDuck = /^\/duck/; botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; 
       botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexSiege = /^\/siege/; botRegexTits = /^\/tits/; botRegexcheese = /^\/cheese/; botRegexStayMaj = /^\/staymaj/; 
-      botRegexmaj = /^\/stay maj/; botRegexBeatit = /^\/beatit/; botRegexTits2 = /^\/tits2/; botRegexTits3 = /^\/tits3/;
+      botRegexmaj = /^\/stay maj/; 
  
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
@@ -100,38 +100,6 @@ function respond() {
     this.res.end();
   }
   
-  else if(request.text && botRegexTits.test(request.text)) {
-    this.res.writeHead(200);
-    if(0.6 >= Math.random() > 0.3)
-      postMessage("http://i.imgur.com/kSadnk8.jpg");
-    else if(Math.random() > 0.6)
-      postMessage("http://i.imgur.com/4JCb63o.jpg");
-    else
-      postMessage("http://i.imgur.com/F2vcuNf.jpg");
-    else if(value >= 60)
-    this.res.end();
-  }
-  
-  else if(request.text && botRegexTits2.test(request.text)) {
-    this.res.writeHead(200);
-    if(0.75 >= Math.random() > 0.5)
-      postMessage("http://i.imgur.com/0RE6wLK.jpg"); 
-    else if(Math.random() > 0.75)
-      postMessage("http://i.imgur.com/znjGVxG.jpg");
-    else
-      postMessage("http://i.imgur.com/zA5taR3.jpg");
-    this.res.end();
-  }
-  
-  else if(request.text && botRegexTits3.test(request.text)) {
-    this.res.writeHead(200);
-    if(0.75 >= Math.random() > 0.5)
-        postmessage("http://i.imgur.com/G5DkpRH.jpg");
-    else
-      postmessage("http://i.imgur.com/wnunRus.jpg");
-    this.res.end();
-  }
-  
     else if(request.text && botRegexStayMaj.test(request.text)) {
     this.res.writeHead(200);
     if(0.75 >= Math.random() > 0.5)
@@ -140,17 +108,6 @@ function respond() {
       postMessage("https://i.groupme.com/920x701.jpeg.5f98e28dab5a4b7ca34696bd637869b9");
     else
       postMessage("https://i.groupme.com/574x834.jpeg.9496ab28563842849d906938dfc4ee47");
-    this.res.end();
-  }
-  
-  else if(request.text && botRegexBeat.test(request.text)) {
-    this.res.writeHead(200);
-    if(0.6 >= Math.random() > 0.3)
-      postMessage("https://i.groupme.com/288x222.gif.c6d8b33d0d464e8e94891ade7d594b82");
-    else if(Math.random() > 0.6)
-      postMessage("https://i.groupme.com/477x241.gif.39d609b4236246b8b78c75325438e385")
-    else
-      postMessage("https://i.groupme.com/320x240.gif.b46b820b6e9d4de0be8fb90aeee42ff2");
     this.res.end();
   }
   

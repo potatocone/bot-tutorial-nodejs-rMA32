@@ -93,10 +93,8 @@ function respond() {
     this.res.writeHead(200);
     if(0.75 >= Math.random() > 0.5)
       postMessage("https://i.groupme.com/500x477.png.51b13f3706b9414c85ad831ae4352361");
-    else if(0.5 >= Math.random() > 0.25)
-      postMessage("https://i.groupme.com/400x400.gif.88ed0db90e6a4bfd937588d3ac09e66d");
     else if(Math.random() >0.75)
-      postMessage("http://i.imgur.com/MQmtrNp.jpg")
+      postMessage("https://i.groupme.com/400x400.gif.88ed0db90e6a4bfd937588d3ac09e66d");
     else
       postMessage("http://cdn.makeagif.com/media/1-24-2014/zaAiBl.gif");
     this.res.end();

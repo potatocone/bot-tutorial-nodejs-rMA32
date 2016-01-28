@@ -7,7 +7,8 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/coolguy/; botDuck = /^\/ducking/; botRegexstaymaj = /^\/staymaj/; botRegexmaj = /^\/maj/; botRegexethan = /^\/ethan/;
       botRegexdaddy = /^\/call me daddy/; botRegexjose = /^\/jose's girl/; botRegexgkys = /^\/gkys/; botRegexDeal = /^\/dealwithit/;
-      botRegexDeals = /^\/dealwitit/;
+      botRegexDeals = /^\/dealwitit/; botRegexBeatit = /^\/beatit/; botRegexTits = /^\/tits/; botRegexBoobs = /^\/boobs/; 
+      botRegexBoobies = /^\/boobies/; 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -75,6 +76,38 @@ function respond() {
     else
       postMessage("https://heavyeditorial.files.wordpress.com/2014/03/deal-with-it-bra.gif")
       this.res.end();
+  }
+  else if(request.text && botRegexBeat.test(request.text)) {
+    this.res.writeHead(200);
+    if(Math.random() >0.6)
+      postMessage("https://i.groupme.com/288x222.gif.c6d8b33d0d464e8e94891ade7d594b82");
+    else
+      postMessage("https://i.groupme.com/320x240.gif.b46b820b6e9d4de0be8fb90aeee42ff2");
+    this.res.end();
+  }
+  else if(request.text && botRegexTits.test(request.text)) {
+    this.res.writeHead(200);
+    if(Math.random() > 0.4)
+      postMessage("http://i.imgur.com/F2vcuNf.jpg");
+    else 
+      postMessage("http://i.imgur.com/0RE6wLK.jpg"); 
+    this.res.end();
+  }
+  else if(request.text && botRegexBoobs.test(request.text)) {
+    this.res.writeHead(200);
+    if(Math.random() > 0.4)
+      postMessage("http://i.imgur.com/znjGVxG.jpg");
+    else
+      postMessage("http://i.imgur.com/zA5taR3.jpg");
+    this.res.end();
+  }  
+  else if(request.text && botRegexBoobies.test(request.text)) {
+    this.res.writeHead(200);
+    else if(0.2 >= Math.random() > 0.4)
+      postmessage("http://i.imgur.com/G5DkpRH.jpg");
+    else
+      postmessage("http://i.imgur.com/wnunRus.jpg");
+    this.res.end();
   }
   else {
     console.log("don't care");

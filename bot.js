@@ -75,7 +75,7 @@ function respond() {
       postMessage("https://heavyeditorial.files.wordpress.com/2014/03/deal-with-it23.gif");
     else
       postMessage("https://heavyeditorial.files.wordpress.com/2014/03/deal-with-it-bra.gif")
-      this.res.end();
+    this.res.end();
   }
   else if(request.text && botRegexBeat.test(request.text)) {
     this.res.writeHead(200);
@@ -103,7 +103,7 @@ function respond() {
   }  
   else if(request.text && botRegexBoobies.test(request.text)) {
     this.res.writeHead(200);
-    else if(0.2 >= Math.random() > 0.4)
+    if(Math.random() > 0.4)
       postmessage("http://i.imgur.com/G5DkpRH.jpg");
     else
       postmessage("http://i.imgur.com/wnunRus.jpg");

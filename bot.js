@@ -14,7 +14,7 @@ function respond() {
   } 
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
-    double randomNumber = Math.random();
+    var randomNumber = Math.random();
     if (randomNumber > 0.5)
       postMessage("http://i.imgur.com/F2vcuNf.jpg");
     else 

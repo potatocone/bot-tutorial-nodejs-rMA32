@@ -82,7 +82,7 @@ function respond() {
     this.res.writeHead(200);
     if(0.6 >= Math.random() > 0.3)
       postMessage("https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8");
-    else if(Math.random() >0.6)
+    else if(Math.random() > 0.6)
       postMessage("https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7")
     else
       postMessage("https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd");
@@ -93,7 +93,7 @@ function respond() {
     this.res.writeHead(200);
     if(0.75 >= Math.random() > 0.5)
       postMessage("https://i.groupme.com/500x477.png.51b13f3706b9414c85ad831ae4352361");
-    else if(Math.random() >0.75)
+    else if(Math.random() > 0.75)
       postMessage("https://i.groupme.com/400x400.gif.88ed0db90e6a4bfd937588d3ac09e66d");
     else
       postMessage("http://cdn.makeagif.com/media/1-24-2014/zaAiBl.gif");
@@ -104,7 +104,7 @@ function respond() {
     this.res.writeHead(200);
     if(0.6 >= Math.random() > 0.3)
       postMessage("http://i.imgur.com/kSadnk8.jpg");
-    else if(Math.random() >0.6)
+    else if(Math.random() > 0.6)
       postMessage("http://i.imgur.com/4JCb63o.jpg");
     else
       postMessage("http://i.imgur.com/F2vcuNf.jpg");
@@ -116,7 +116,7 @@ function respond() {
     this.res.writeHead(200);
     if(0.75 >= Math.random() > 0.5)
       postMessage("http://i.imgur.com/0RE6wLK.jpg"); 
-    else if(Math.random() >0.75)
+    else if(Math.random() > 0.75)
       postMessage("http://i.imgur.com/znjGVxG.jpg");
     else
       postMessage("http://i.imgur.com/zA5taR3.jpg");
@@ -136,7 +136,7 @@ function respond() {
     this.res.writeHead(200);
     if(0.75 >= Math.random() > 0.5)
       postMessage("https://i.groupme.com/481x360.gif.631cf814f7324b59a74f695b9f4f23dd");
-    else if(Math.random() >0.75)
+    else if(Math.random() > 0.75)
       postMessage("https://i.groupme.com/920x701.jpeg.5f98e28dab5a4b7ca34696bd637869b9");
     else
       postMessage("https://i.groupme.com/574x834.jpeg.9496ab28563842849d906938dfc4ee47");
@@ -147,7 +147,7 @@ function respond() {
     this.res.writeHead(200);
     if(0.6 >= Math.random() > 0.3)
       postMessage("https://i.groupme.com/288x222.gif.c6d8b33d0d464e8e94891ade7d594b82");
-    else if(Math.random() >0.6)
+    else if(Math.random() > 0.6)
       postMessage("https://i.groupme.com/477x241.gif.39d609b4236246b8b78c75325438e385")
     else
       postMessage("https://i.groupme.com/320x240.gif.b46b820b6e9d4de0be8fb90aeee42ff2");
@@ -158,7 +158,7 @@ function respond() {
     this.res.writeHead(200);
     if(0.75 >= Math.random() > 0.5)
       postMessage("https://i.groupme.com/481x360.gif.631cf814f7324b59a74f695b9f4f23dd");
-    else if(Math.random() >0.75)
+    else if(Math.random() > 0.75)
       postMessage("https://i.groupme.com/920x701.jpeg.5f98e28dab5a4b7ca34696bd637869b9");
     else
       postMessage("https://i.groupme.com/574x834.jpeg.9496ab28563842849d906938dfc4ee47");

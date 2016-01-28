@@ -16,7 +16,7 @@ function respond() {
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
     double randomNumber = Math.random();
-    boolean isTails = randomNumber > .5;
+    boolean isTails = randomNumber > 0.5;
     if (isTails)
       postMessage("http://i.imgur.com/F2vcuNf.jpg");
     else 

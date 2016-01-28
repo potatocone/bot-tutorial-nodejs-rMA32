@@ -15,15 +15,15 @@ function respond() {
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
     double number = Math.random();
-    if (number > 85)
+    if (number > 0.85)
       postMessage("http://i.imgur.com/F2vcuNf.jpg");
-    else if (number > 70)  
+    else if (number > 0.70)  
       postMessage("http://i.imgur.com/znjGVxG.jpg");
-    else if (number > 55) 
+    else if (number > 0.55) 
       postMessage("http://i.imgur.com/zA5taR3.jpg");
-    else if (number > 40)
+    else if (number > 0.40)
       postmessage("http://i.imgur.com/G5DkpRH.jpg");
-    else if (number > 25)
+    else if (number > 0.25)
       postmessage("http://i.imgur.com/wnunRus.jpg");
     else 
       postMessage("http://i.imgur.com/0RE6wLK.jpg"); 

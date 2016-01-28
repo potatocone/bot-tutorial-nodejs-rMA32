@@ -5,7 +5,9 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/coolguy/; botDuck = /^\/ducking/; botRegexstaymaj = /^\/staymaj/; botRegexmaj = /^\/maj/; 
+      botRegex = /^\/coolguy/; botDuck = /^\/ducking/; botRegexstaymaj = /^\/staymaj/; botRegexmaj = /^\/maj/; botRegexethan = /^\/ethan/;
+      botRegexdaddy = /^\/call me daddy/; botRegexjose = /^\/jose's girl/; botRegexgkys = /^\/gkys/; botRegexDeal = /^\/dealwithit/;
+      botRegexDeals = /^\/dealwitit/;
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -34,6 +36,45 @@ function respond() {
     else
       postMessage("https://i.groupme.com/574x834.jpeg.9496ab28563842849d906938dfc4ee47");
     this.res.end();
+  }
+  else if(request.text && botRegexethan.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/1609x2250.jpeg.0ff61195e1ac46cfa9e42c748d434a02");
+    this.res.end();
+  }
+  else if(request.text && botRegexdaddy.test(request.text)) {
+    this.res.writeHead(200);
+    if(Math.random() >0.5)
+      postMessage("https://upload.wikimedia.org/wikipedia/commons/f/f8/Tiger_Woods_drives_by_Allison.jpg");
+    else
+      postMessage("http://i.telegraph.co.uk/multimedia/archive/02265/tiger-woods_2265368b.jpg");
+    this.res.end();
+  }
+  else if(request.text && botRegexjose.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/236x316.jpeg.cded5dc6c9524c68b08461720f481a00");
+    this.res.end();
+  }
+  else if(request.text && botRegexgkys.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/250x188.gif.023685f596164cbc96e9c78ee7c2eb3c");
+    this.res.end();
+  }
+  else if(request.text && botRegexDeals.test(request.text)) {
+    this.res.writeHead(200);
+    if(Math.random() > 0.5)
+      postMessage("https://i.imgur.com/C9aUdh.jpg");
+    else
+      postMessage("https://heavyeditorial.files.wordpress.com/2014/03/jackson.gif?w=500");
+    this.res.end();
+  }
+  else if(request.text && botRegexDeal.test(request.text)) {
+    this.res.writeHead(200);
+  if(Math.random() > 0.5)
+      postMessage("https://heavyeditorial.files.wordpress.com/2014/03/deal-with-it23.gif");
+    else
+      postMessage("https://heavyeditorial.files.wordpress.com/2014/03/deal-with-it-bra.gif")
+      this.res.end();
   }
   else {
     console.log("don't care");

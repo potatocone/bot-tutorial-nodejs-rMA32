@@ -102,7 +102,7 @@ function respond() {
   
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
-    int value = rand.nextInt(50) + 1;
+    var value = (int) Math.floor(Math.random() * 101)
     if(value >= 45)
       postMessage("http://i.imgur.com/kSadnk8.jpg");
     else if(value >= 40)

@@ -102,22 +102,22 @@ function respond() {
   
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
-    var value = (int) Math.floor(Math.random() * 101)
-    if(value >= 45)
+    var value = Math.floor(Math.random() * 101)
+    if(value >= 90)
       postMessage("http://i.imgur.com/kSadnk8.jpg");
-    else if(value >= 40)
+    else if(value >= 80)
       postMessage("http://i.imgur.com/4JCb63o.jpg");
-    else if(value >= 35)
+    else if(value >= 70)
       postMessage("http://i.imgur.com/F2vcuNf.jpg");
-    else if(value >= 30)
+    else if(value >= 60)
       postMessage("http://i.imgur.com/0RE6wLK.jpg"); 
-    else if(value >= 25)
+    else if(value >= 50)
       postMessage("http://i.imgur.com/znjGVxG.jpg");
-    else if(value >= 20)
+    else if(value >= 40)
       postMessage("http://i.imgur.com/zA5taR3.jpg");
-    else if(value >= 15)
+    else if(value >= 30)
       postmessage("http://i.imgur.com/G5DkpRH.jpg");
-    else if(value >= 10)
+    else if(value >= 20)
       postmessage("http://i.imgur.com/wnunRus.jpg");
     this.res.end();
   }

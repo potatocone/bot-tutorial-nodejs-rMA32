@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/; botRegexTits = /^\/tits/;
+      botRegex = /^\/cool guy/; botRegexTits = /^\/tits/; botRegexjres = /^\/jres/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -29,7 +29,19 @@ function respond() {
       postMessage("http://i.imgur.com/0RE6wLK.jpg"); 
     this.res.end();
   }
-
+  else if(request.text && botRegexjres.test(request.text)) {
+    this.res.writeHead(200);
+    var number = Math.random();
+    if (number > 0.75)
+      postmessage("https://i.groupme.com/960x218.png.ac78f3ea4940454eb0a051b58658fe5d.large");
+    else if (number > 0.50)
+      postmessage("https://i.groupme.com/1440x316.png.5f632224e1034cd48ad4e75b3438c8d4.large")
+    else if (number > 0.25)
+      postmessage("https://i.groupme.com/639x134.png.7a194ed0819845358747823e0ae29f3c.large")
+    else 
+      postMessage("https://i.groupme.com/829x157.jpeg.5f257a7190d847249229be5c55a0532f.large"); 
+    this.res.end();
+  }
   else {
     console.log("don't care");
     this.res.writeHead(200);

@@ -1,3 +1,4 @@
+import java.util.Random;
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
@@ -14,16 +15,17 @@ function respond() {
   } 
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
-    var randomNumber = Math.random();
-    if (randomNumber > 0.85)
+    static Random _random = new Random()
+    int number = _random.nextInt(100);
+    if (number > 85)
       postMessage("http://i.imgur.com/F2vcuNf.jpg");
-    else if (randomNumber > 0.70)  
+    else if (number > 70)  
       postMessage("http://i.imgur.com/znjGVxG.jpg");
-    else if (randomNumber > 0.55) 
+    else if (number > 55) 
       postMessage("http://i.imgur.com/zA5taR3.jpg");
-    else if (randomNumber > 0.40)
+    else if (number > 40)
       postmessage("http://i.imgur.com/G5DkpRH.jpg");
-    else if (randomNumber > 0.25)
+    else if (number > 25)
       postmessage("http://i.imgur.com/wnunRus.jpg");
     else 
       postMessage("http://i.imgur.com/0RE6wLK.jpg"); 

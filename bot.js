@@ -1,3 +1,4 @@
+import java.util.Random;
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
@@ -14,7 +15,9 @@ function respond() {
   } 
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
-    if(Math.random() > 0.4)
+    double randomNumber = Math.random();
+    boolean isTails = randomNumber > .5;
+    if (isTails)
       postMessage("http://i.imgur.com/F2vcuNf.jpg");
     else 
       postMessage("http://i.imgur.com/0RE6wLK.jpg"); 

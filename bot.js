@@ -15,7 +15,7 @@ function respond() {
   } 
   else if(request.text && botDuck.test(request.text)) {
     this.res.writeHead(200);
-    if(Math.random() >0.6)
+    if(Math.random() >0.4)
       postMessage("https://i.groupme.com/320x180.gif.53776560c9984fd59608c337274b0ff8");
     else
       postMessage("https://i.groupme.com/480x360.gif.6baceb3ecda143918edb0fc35b036b46");
@@ -23,7 +23,7 @@ function respond() {
   }
   else if(request.text && botRegexstaymaj.test(request.text)) {
     this.res.writeHead(200);
-    if(Math.random() > 0.5)
+    if(Math.random() > 0.4)
       postMessage("https://i.groupme.com/920x701.jpeg.5f98e28dab5a4b7ca34696bd637869b9");
     else
       postMessage("https://i.groupme.com/574x834.jpeg.9496ab28563842849d906938dfc4ee47");
@@ -31,7 +31,7 @@ function respond() {
   }
   else if(request.text && botRegexmaj.test(request.text)) {
     this.res.writeHead(200);
-    if(Math.random() > 0.5)
+    if(Math.random() > 0.4)
       postMessage("https://i.groupme.com/481x360.gif.631cf814f7324b59a74f695b9f4f23dd");
     else
       postMessage("https://i.groupme.com/574x834.jpeg.9496ab28563842849d906938dfc4ee47");
@@ -44,7 +44,7 @@ function respond() {
   }
   else if(request.text && botRegexdaddy.test(request.text)) {
     this.res.writeHead(200);
-    if(Math.random() >0.5)
+    if(Math.random() >0.4)
       postMessage("https://upload.wikimedia.org/wikipedia/commons/f/f8/Tiger_Woods_drives_by_Allison.jpg");
     else
       postMessage("http://i.telegraph.co.uk/multimedia/archive/02265/tiger-woods_2265368b.jpg");
@@ -62,7 +62,7 @@ function respond() {
   }
   else if(request.text && botRegexDeals.test(request.text)) {
     this.res.writeHead(200);
-    if(Math.random() > 0.5)
+    if(Math.random() > 0.3)
       postMessage("https://i.imgur.com/C9aUdh.jpg");
     else
       postMessage("https://heavyeditorial.files.wordpress.com/2014/03/jackson.gif?w=500");
@@ -70,7 +70,7 @@ function respond() {
   }
   else if(request.text && botRegexDeal.test(request.text)) {
     this.res.writeHead(200);
-  if(Math.random() > 0.5)
+  if(Math.random() > 0.3)
       postMessage("https://heavyeditorial.files.wordpress.com/2014/03/deal-with-it23.gif");
     else
       postMessage("https://heavyeditorial.files.wordpress.com/2014/03/deal-with-it-bra.gif")

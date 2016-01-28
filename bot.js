@@ -1,4 +1,3 @@
-import java.util.Random;
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
@@ -15,8 +14,7 @@ function respond() {
   } 
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
-    static Random _random = new Random()
-    int number = _random.nextInt(100);
+    double number = Math.random();
     if (number > 85)
       postMessage("http://i.imgur.com/F2vcuNf.jpg");
     else if (number > 70)  

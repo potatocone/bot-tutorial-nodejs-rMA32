@@ -102,22 +102,32 @@ function respond() {
   
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
-    var value = Math.floor(Math.random() * 101)
-    if(value >= 90)
+    if(0.6 >= Math.random() > 0.3)
       postMessage("http://i.imgur.com/kSadnk8.jpg");
-    else if(value >= 80)
+    else if(Math.random() >0.6)
       postMessage("http://i.imgur.com/4JCb63o.jpg");
-    else if(value >= 70)
+    else
       postMessage("http://i.imgur.com/F2vcuNf.jpg");
     else if(value >= 60)
+    this.res.end();
+  }
+  
+  else if(request.text && botRegexTits2.test(request.text)) {
+    this.res.writeHead(200);
+    if(0.75 >= Math.random() > 0.5)
       postMessage("http://i.imgur.com/0RE6wLK.jpg"); 
-    else if(value >= 50)
+    else if(Math.random() >0.75)
       postMessage("http://i.imgur.com/znjGVxG.jpg");
-    else if(value >= 40)
+    else
       postMessage("http://i.imgur.com/zA5taR3.jpg");
-    else if(value >= 30)
-      postmessage("http://i.imgur.com/G5DkpRH.jpg");
-    else if(value >= 20)
+    this.res.end();
+  }
+  
+  else if(request.text && botRegexTits2.test(request.text)) {
+    this.res.writeHead(200);
+    if(0.75 >= Math.random() > 0.5)
+        postmessage("http://i.imgur.com/G5DkpRH.jpg");
+    else
       postmessage("http://i.imgur.com/wnunRus.jpg");
     this.res.end();
   }

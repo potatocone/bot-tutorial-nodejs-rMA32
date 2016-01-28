@@ -100,6 +100,28 @@ function respond() {
     this.res.end();
   }
   
+  else if(request.text && botRegexTits.test(request.text)) {
+    this.res.writeHead(200);
+    double x = Math.random()
+    if(x >= 0.9)
+      postMessage("http://i.imgur.com/kSadnk8.jpg");
+    else if(x >= 0.8)
+      postMessage("http://i.imgur.com/4JCb63o.jpg");
+    else if(x >= 0.7)
+      postMessage("http://i.imgur.com/F2vcuNf.jpg");
+    else if(x >= 0.6)
+      postMessage("http://i.imgur.com/0RE6wLK.jpg"); 
+    else if(x >= 0.5)
+      postMessage("http://i.imgur.com/znjGVxG.jpg");
+    else if(x >= 0.4)
+      postMessage("http://i.imgur.com/zA5taR3.jpg");
+    else if(x >= 0.3)
+      postmessage("http://i.imgur.com/G5DkpRH.jpg");
+    else
+      postmessage("http://i.imgur.com/wnunRus.jpg");
+    this.res.end();
+  }
+  
     else if(request.text && botRegexStayMaj.test(request.text)) {
     this.res.writeHead(200);
     if(0.75 >= Math.random() > 0.5)

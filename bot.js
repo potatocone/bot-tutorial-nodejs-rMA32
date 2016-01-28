@@ -118,7 +118,7 @@ function respond() {
       postMessage("http://i.imgur.com/zA5taR3.jpg");
     else if(x >= 0.3)
       postmessage("http://i.imgur.com/G5DkpRH.jpg");
-    else
+    else if(x >= 0.0)
       postmessage("http://i.imgur.com/wnunRus.jpg");
     this.res.end();
   }

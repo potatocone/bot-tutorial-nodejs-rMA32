@@ -1,4 +1,3 @@
-import java.util.Random;
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 

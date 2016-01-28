@@ -72,9 +72,5 @@ function postMessage(response) {
   botReq.end(JSON.stringify(body));
 }
 
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-
 
 exports.respond = respond;

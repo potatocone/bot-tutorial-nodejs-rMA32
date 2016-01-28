@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/; botRegexTits = /^\/tits/; botRegexBoobs = /^\/boobs/; botRegexBoobies = /^\/boobies/; 
+      botRegex = /^\/cool guy/; botRegexTits = /^\/tits/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -15,28 +15,21 @@ function respond() {
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
     var randomNumber = Math.random();
-    if (randomNumber > 0.5)
+    if (randomNumber > 0.85)
       postMessage("http://i.imgur.com/F2vcuNf.jpg");
+    else if (randomNumber > 0.70)  
+      postMessage("http://i.imgur.com/znjGVxG.jpg");
+    else if (randomNumber > 0.55) 
+      postMessage("http://i.imgur.com/zA5taR3.jpg");
+    else if (randomNumber > 0.40)
+      postmessage("http://i.imgur.com/G5DkpRH.jpg");
+    else if (randomNumber > 0.25)
+      postmessage("http://i.imgur.com/wnunRus.jpg");
     else 
       postMessage("http://i.imgur.com/0RE6wLK.jpg"); 
     this.res.end();
   }
-  else if(request.text && botRegexBoobs.test(request.text)) {
-    this.res.writeHead(200);
-    if(Math.random() > 0.4)
-      postMessage("http://i.imgur.com/znjGVxG.jpg");
-    else
-      postMessage("http://i.imgur.com/zA5taR3.jpg");
-    this.res.end();
-  }  
-  else if(request.text && botRegexBoobies.test(request.text)) {
-    this.res.writeHead(200);
-    if(Math.random() > 0.4)
-      postmessage("http://i.imgur.com/G5DkpRH.jpg");
-    else 
-      postmessage("http://i.imgur.com/wnunRus.jpg");
-    this.res.end();
-  }
+
   else {
     console.log("don't care");
     this.res.writeHead(200);

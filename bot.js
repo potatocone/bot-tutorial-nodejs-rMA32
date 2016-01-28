@@ -102,8 +102,7 @@ function respond() {
   
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
-    var x;
-    x = Math.random()
+    var x = Math.random();
     if(x >= 0.9)
       postMessage("http://i.imgur.com/kSadnk8.jpg");
     else if(x >= 0.8)

@@ -91,20 +91,20 @@ function respond() {
   
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
-    rand == Math.random()
-    if(rand >= 0.9)
+    var rand == Math.random()
+    if(var rand >= 0.9)
       postMessage("http://i.imgur.com/kSadnk8.jpg");
-    else if(rand >= 0.8)
+    else if(var rand >= 0.8)
       postMessage("http://i.imgur.com/4JCb63o.jpg");
-    else if(rand >= 0.7)
+    else if(var rand >= 0.7)
       postMessage("http://i.imgur.com/F2vcuNf.jpg");
-    else if(rand >= 0.6)
+    else if(var rand >= 0.6)
       postMessage("http://i.imgur.com/0RE6wLK.jpg"); 
-    else if(rand >= 0.5)
+    else if(var rand >= 0.5)
       postMessage("http://i.imgur.com/znjGVxG.jpg");
-    else if(rand >= 0.4)
+    else if(var rand >= 0.4)
       postMessage("http://i.imgur.com/zA5taR3.jpg");
-    else if(rand >= 0.3)
+    else if(var rand >= 0.3)
       postmessage("http://i.imgur.com/G5DkpRH.jpg");
     else
       postmessage("http://i.imgur.com/wnunRus.jpg");

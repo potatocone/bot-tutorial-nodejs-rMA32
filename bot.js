@@ -15,14 +15,12 @@ function respond() {
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
     var number = Math.random();
-    if (1.00 >= number > 0.85)
-      postMessage("http://i.imgur.com/F2vcuNf.jpg");
-    else if (number > 0.70 && number <= 0.85)  
-      postMessage("http://i.imgur.com/znjGVxG.jpg");
-    else if (number > 0.55 && number <= 0.70) 
-      postMessage("http://i.imgur.com/zA5taR3.jpg");
+    if (1.00 >= number > 0.70)
+      postMessage("https://scontent-sea1-1.cdninstagram.com/t51.2885-15/e35/12556153_1572118576413388_1494898369_n.jpg");
+    else if (number > 0.55 && number <= 0.70)  
+      postMessage("https://scontent-sea1-1.cdninstagram.com/t51.2885-15/e35/12558547_164010630637785_507904610_n.jpg");
     else if (number > 0.40 && number <= 0.55)
-      postmessage("http://i.imgur.com/G5DkpRH.jpg");
+      postmessage("https://scontent-sea1-1.cdninstagram.com/t51.2885-15/e35/928507_601374456681782_740746957_n.jpg");
     else if (number > 0.25 && number <= 0.40)
       postmessage("http://i.imgur.com/wnunRus.jpg");
     else 
@@ -31,7 +29,7 @@ function respond() {
   }
   else if(request.text && botRegexjres.test(request.text)) {
     this.res.writeHead(200);
-    if(0.6 >= Math.random() > 0.3)
+    if(Math.random() > 0.4)
       postmessage("http://i.imgur.com/S4RpEoQ.png");
     else 
       postMessage("http://i.imgur.com/jti4RUU.png"); 

@@ -15,7 +15,7 @@ function respond() {
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
     var number = Math.random();
-    if (number > 0.85)
+    if (1.00 >= number > 0.85)
       postMessage("http://i.imgur.com/F2vcuNf.jpg");
     else if (number > 0.70 && number <= 0.85)  
       postMessage("http://i.imgur.com/znjGVxG.jpg");
@@ -31,7 +31,7 @@ function respond() {
   }
   else if(request.text && botRegexjres.test(request.text)) {
     this.res.writeHead(200);
-    if (Math.random() > 0.50)
+    if(0.6 >= Math.random() > 0.3)
       postmessage("http://i.imgur.com/S4RpEoQ.png");
     else 
       postMessage("http://i.imgur.com/jti4RUU.png"); 

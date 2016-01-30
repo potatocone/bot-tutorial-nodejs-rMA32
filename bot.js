@@ -15,9 +15,9 @@ function respond() {
   else if(request.text && botRegexTits.test(request.text)) {
     this.res.writeHead(200);
     var number = Math.random();
-    if (1.00 >= number > 0.70)
+    if (1.00 >= number > 0.80)
       postMessage("https://scontent-sea1-1.cdninstagram.com/t51.2885-15/e35/12556153_1572118576413388_1494898369_n.jpg");
-    else if (number > 0.55 && number <= 0.70)  
+    else if (number > 0.55 && number <= 0.80)  
       postMessage("https://scontent-sea1-1.cdninstagram.com/t51.2885-15/e35/12558547_164010630637785_507904610_n.jpg");
     else if (number > 0.40 && number <= 0.55)
       postmessage("https://scontent-sea1-1.cdninstagram.com/t51.2885-15/e35/928507_601374456681782_740746957_n.jpg");

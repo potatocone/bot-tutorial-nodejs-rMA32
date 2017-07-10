@@ -26,7 +26,7 @@ function respond() {
   }
   else if(request.text && botRegexOW.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("www.daddyleagues.com/maddenrating/");
+    postMessage("http://www.daddyleagues.com/maddenrating/");
     this.res.end();
   } 
   else if(request.text && botRegexRules.test(request.text)) {
@@ -36,14 +36,14 @@ function respond() {
   } 
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);  
-    postMessage("http://daddyleagues.com/madgms/team/"+request.text.substring(5,8)+"/schedule");
+    postMessage("http://www.daddyleagues.com/madgms/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();
   }
   else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/madgms/players?name="+rep+"&position=all&team=all");
+    postMessage("http://www.daddyleagues.com/madgms/players?name="+rep+"&position=all&team=all");
     this.res.end();
   }  
   else if(request.text && botRegexTw.test(request.text)) {
@@ -58,7 +58,7 @@ function respond() {
   } 
     else if(request.text && botRegexGH.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://gamerhuddle.com/league/madden-gms/");
+    postMessage("https://www.gamerhuddle.com/league/madden-gms/");
     this.res.end();
   } 
   else if(request.text && botRegexSiege.test(request.text)) {

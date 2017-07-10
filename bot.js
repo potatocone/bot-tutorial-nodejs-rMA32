@@ -5,9 +5,9 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/; botRegexDL = /^\/DDLL/i; botRegexRules = /^\/ruless/
+      botRegex = /^\/cool guy/; botRegexDL = /^\/DDLL/i; botRegexRules = /^\/ruless/; botDuck = /^\/duck/;
       botRegexSC = /^\/SDLL/i; botRegexP = /^\/PDLL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/;
-      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; botRegexGH = /^\/ghh/; 
+      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; botRegexGH = /^\/ghh/; botRegexDeal = /^\/dealwithit/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
       siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
@@ -22,6 +22,14 @@ function respond() {
     this.res.writeHead(200);
     //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
     postMessage("http://daddyleagues.com/madgms/team/"+request.text.substring(5,8)+"/depthchart");
+    this.res.end();
+  }
+  else if(request.text && botDuck.test(request.text)) {
+    this.res.writeHead(200);
+    if(1.0 >= Math.random() >0.4)
+      postMessage("https://i.groupme.com/320x180.gif.53776560c9984fd59608c337274b0ff8");
+    else
+      postMessage("https://i.groupme.com/480x360.gif.6baceb3ecda143918edb0fc35b036b46");
     this.res.end();
   }
   else if(request.text && botRegexOW.test(request.text)) {
@@ -46,6 +54,14 @@ function respond() {
     postMessage("http://www.daddyleagues.com/madgms/players?name="+rep+"&position=all&team=all");
     this.res.end();
   }  
+  else if(request.text && botRegexDeal.test(request.text)) {
+    this.res.writeHead(200);
+  if(1.0 >= Math.random() > 0.3)
+      postMessage("https://heavyeditorial.files.wordpress.com/2014/03/deal-with-it23.gif");
+    else
+      postMessage("https://heavyeditorial.files.wordpress.com/2014/03/deal-with-it-bra.gif")
+    this.res.end();
+  }
   else if(request.text && botRegexTw.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://www.twitch.tv/"+request.text.substring(8,request.text.length));

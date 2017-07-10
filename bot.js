@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/; botRegexDL = /^\/DDLL/i; botRegexRules = /^\/rules/
+      botRegex = /^\/cool guy/; botRegexDL = /^\/DDLL/i; botRegexRules = /^\/ruless/
       botRegexSC = /^\/SDLL/i; botRegexP = /^\/PDLL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/;
       botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; botRegexGH = /^\/ghh/; 
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'

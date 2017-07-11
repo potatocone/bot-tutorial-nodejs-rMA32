@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/; botRegexDL = /^\/DDLL/i; botRegexRules = /^\/ruless/; botDuck = /^\/ducking/;
       botRegexSC = /^\/SDLL/i; botRegexP = /^\/PDLL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/;
-      botRegexDraft = /^\/draft/; botRegexCarr = /^\/carr/;
+      botRegexDraft = /^\/draft/; botRegexCarr = /^\/carr/; botRegexTrade = /^\/trade/;
       botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; botRegexGH = /^\/ghh/; botRegexDeal = /^\/dealwithit/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
       siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
@@ -43,7 +43,7 @@ function respond() {
     postMessage("https://www.reddit.com/r/MaddenGMs/comments/6mi8hc/2020_live_draft_tracker/");
     this.res.end();
   } 
-  else if(request.text && botRegexDraft.test(request.text)) {
+  else if(request.text && botRegexTrade.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://1drv.ms/x/s!AkfwQi26meWD2220qCexElpxVfRh");
     this.res.end();

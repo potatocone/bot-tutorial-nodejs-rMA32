@@ -43,6 +43,11 @@ function respond() {
     postMessage("https://www.reddit.com/r/MaddenGMs/comments/6mi8hc/2020_live_draft_tracker/");
     this.res.end();
   } 
+  else if(request.text && botRegexDraft.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://1drv.ms/x/s!AkfwQi26meWD2220qCexElpxVfRh");
+    this.res.end();
+  } 
   else if(request.text && botCarr.test(request.text)) {
     this.res.writeHead(200);
     if(1.0 >= Math.random() >0.4)

@@ -5,8 +5,9 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/; botRegexDL = /^\/DDLL/i; botRegexRules = /^\/ruless/; botDuck = /^\/duck/;
+      botRegex = /^\/cool guy/; botRegexDL = /^\/DDLL/i; botRegexRules = /^\/ruless/; botDuck = /^\/ducking/;
       botRegexSC = /^\/SDLL/i; botRegexP = /^\/PDLL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/;
+      botRegexDraft = /^\/draft/; botRegexCarr = /^\/carr/;
       botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; botRegexGH = /^\/ghh/; botRegexDeal = /^\/dealwithit/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
       siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
@@ -37,6 +38,19 @@ function respond() {
     postMessage("http://www.daddyleagues.com/maddenrating/");
     this.res.end();
   } 
+  else if(request.text && botRegexDraft.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://www.reddit.com/r/MaddenGMs/comments/6mi8hc/2020_live_draft_tracker/");
+    this.res.end();
+  } 
+  else if(request.text && botCarr.test(request.text)) {
+    this.res.writeHead(200);
+    if(1.0 >= Math.random() >0.4)
+      postMessage("https://i.groupme.com/813x427.jpeg.8d27642537f146fb911d5846bc5dd64b");
+    else
+      postMessage("http://i.imgur.com/mKojhAF.jpg");
+    this.res.end();
+  }
   else if(request.text && botRegexRules.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://www.reddit.com/r/MaddenGMs/comments/5q2h1j/house_rules_for_the_league");

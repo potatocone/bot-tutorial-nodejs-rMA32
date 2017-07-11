@@ -53,7 +53,7 @@ function respond() {
     postMessage("https://docs.google.com/spreadsheets/d/1qY-WS6wdbsWNPPBumnNU7xHxS1xUABQgxd-PSRu15Mo/edit?usp=sharing");
     this.res.end();
   } 
-  else if(request.text && botCarr.test(request.text)) {
+  else if(request.text && botRegexCarr.test(request.text)) {
     this.res.writeHead(200);
       postMessage("https://i.groupme.com/813x427.jpeg.8d27642537f146fb911d5846bc5dd64b");
     this.res.end();

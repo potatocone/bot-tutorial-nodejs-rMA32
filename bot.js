@@ -50,10 +50,7 @@ function respond() {
   } 
   else if(request.text && botCarr.test(request.text)) {
     this.res.writeHead(200);
-    if(1.0 >= Math.random() >0.4)
       postMessage("https://i.groupme.com/813x427.jpeg.8d27642537f146fb911d5846bc5dd64b");
-    else
-      postMessage("http://i.imgur.com/mKojhAF.jpg");
     this.res.end();
   }
   else if(request.text && botRegexRules.test(request.text)) {

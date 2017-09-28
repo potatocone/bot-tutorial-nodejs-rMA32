@@ -5,14 +5,26 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/coolguy/; botDuck = /^\/ducking/; botRegexstaymaj = /^\/staymaj/; botRegexmaj = /^\/maj/; botRegexethan = /^\/ethan/;
-      botRegexdaddy = /^\/call me daddy/; botRegexjose = /^\/jose's girl/; botRegexgkys = /^\/gkys/; botRegexDeal = /^\/dealwithit/;
-      botRegexDeals = /^\/dealwitit/; botRegexBeatit = /^\/beatit/; botRegexboobs = /^\/boobs/;
+      botRegex = /^\/cool guy/; botRegexDL = /^\/DDLL/i; botRegexRules = /^\/ruless/; botDuck = /^\/ducking/;
+      botRegexSC = /^\/SDLL/i; botRegexP = /^\/PDLL/i;  botRegexTw = /^\/twitch/i;
+      botRegexCarr = /^\/carr/; botRegexTrade = /^\/trade/;
+      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; botRegexDeal = /^\/dealwithit/;
+      siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
+      siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
+  var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
+                ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
+                "MIA","BUF","SF","WAS","NYJ","TB"]
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
     this.res.end();
-  } 
+  }
+  else if(request.text && botRegexDL.test(request.text)) {
+    this.res.writeHead(200);
+    //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
+    postMessage("http://daddyleagues.com/snd/team/"+request.text.substring(5,8)+"/depthchart");
+    this.res.end();
+  }
   else if(request.text && botDuck.test(request.text)) {
     this.res.writeHead(200);
     if(1.0 >= Math.random() >0.4)
@@ -21,58 +33,38 @@ function respond() {
       postMessage("https://i.groupme.com/480x360.gif.6baceb3ecda143918edb0fc35b036b46");
     this.res.end();
   }
-  else if(request.text && botRegexstaymaj.test(request.text)) {
+  else if(request.text && botRegexOW.test(request.text)) {
     this.res.writeHead(200);
-    if(1.0 >= Math.random() > 0.4)
-      postMessage("https://i.groupme.com/920x701.jpeg.5f98e28dab5a4b7ca34696bd637869b9");
-    else
-      postMessage("https://i.groupme.com/574x834.jpeg.9496ab28563842849d906938dfc4ee47");
+    postMessage("http://www.daddyleagues.com/maddenrating/");
+    this.res.end();
+  } 
+  else if(request.text && botRegexTrade.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://1drv.ms/x/s!AkfwQi26meWD2220qCexElpxVfRh");
+    this.res.end();
+  } 
+  else if(request.text && botRegexCarr.test(request.text)) {
+    this.res.writeHead(200);
+      postMessage("https://i.groupme.com/813x427.jpeg.8d27642537f146fb911d5846bc5dd64b");
     this.res.end();
   }
-  else if(request.text && botRegexmaj.test(request.text)) {
+  else if(request.text && botRegexRules.test(request.text)) {
     this.res.writeHead(200);
-    if(1.0 >= Math.random() > 0.4)
-      postMessage("https://i.groupme.com/481x360.gif.631cf814f7324b59a74f695b9f4f23dd");
-    else
-      postMessage("https://i.groupme.com/574x834.jpeg.9496ab28563842849d906938dfc4ee47");
+    postMessage("http://daddyleagues.com/snd/rules");
+    this.res.end();
+  } 
+  else if(request.text && botRegexSC.test(request.text)) {
+    this.res.writeHead(200);  
+    postMessage("http://www.daddyleagues.com/snd/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();
   }
-  else if(request.text && botRegexethan.test(request.text)) {
+  else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/1609x2250.jpeg.0ff61195e1ac46cfa9e42c748d434a02");
+    var req = request.text.substring(5,request.text.length);
+    var rep = req.replace(/ /,"+");
+    postMessage("http://www.daddyleagues.com/snd/players?name="+rep+"&position=all&team=all");
     this.res.end();
-  }
-  else if(request.text && botRegexdaddy.test(request.text)) {
-    this.res.writeHead(200);
-    if(1.0 >= Math.random() >0.4)
-      postMessage("https://upload.wikimedia.org/wikipedia/commons/f/f8/Tiger_Woods_drives_by_Allison.jpg");
-    else
-      postMessage("http://i.telegraph.co.uk/multimedia/archive/02265/tiger-woods_2265368b.jpg");
-    this.res.end();
-  }
-  else if(request.text && botRegexjose.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://i.groupme.com/236x316.jpeg.cded5dc6c9524c68b08461720f481a00");
-    this.res.end();
-  }
-  else if(request.text && botRegexgkys.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://i.groupme.com/250x188.gif.023685f596164cbc96e9c78ee7c2eb3c");
-    this.res.end();
-  }
-  else if(request.text && botRegexboobs.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://i.groupme.com/912x1620.jpeg.060ab9f348094bb491b1ccf281ca16f6");
-    this.res.end();
-  }
-  else if(request.text && botRegexDeals.test(request.text)) {
-    this.res.writeHead(200);
-    if(1.0 >= Math.random() > 0.3)
-      postMessage("https://i.imgur.com/C9aUdh.jpg");
-    else
-      postMessage("https://heavyeditorial.files.wordpress.com/2014/03/jackson.gif?w=500");
-    this.res.end();
-  }
+  }  
   else if(request.text && botRegexDeal.test(request.text)) {
     this.res.writeHead(200);
   if(1.0 >= Math.random() > 0.3)
@@ -81,26 +73,46 @@ function respond() {
       postMessage("https://heavyeditorial.files.wordpress.com/2014/03/deal-with-it-bra.gif")
     this.res.end();
   }
-  
+  else if(request.text && botRegexTw.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://www.twitch.tv/"+request.text.substring(8,request.text.length));
+    this.res.end();
+  } 
+  else if(request.text && botRegexSiege.test(request.text)) {
+    this.res.writeHead(200);
+    if(0.6 >= Math.random() > 0.3)
+      postMessage(siege1);
+    else if(Math.random() >0.6)
+      postMessage(siege3)
+    else
+      postMessage(siege2);
+    this.res.end();
+  }
   else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
   }
 }
+
 function postMessage(response) {
   var botResponse,options, body, botReq;
+
   botResponse = response
+
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
     method: 'POST'
   };
+
   body = {
     "bot_id" : botID,
     "text" : botResponse
   };
+
   console.log('sending ' + botResponse + ' to ' + botID);
+
   botReq = HTTPS.request(options, function(res) {
       if(res.statusCode == 202) {
         //neat
@@ -108,6 +120,7 @@ function postMessage(response) {
         console.log('rejecting bad status code ' + res.statusCode);
       }
   });
+
   botReq.on('error', function(err) {
     console.log('error posting message '  + JSON.stringify(err));
   });
@@ -116,7 +129,10 @@ function postMessage(response) {
   });
   botReq.end(JSON.stringify(body));
 }
+
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
+
+
 exports.respond = respond;

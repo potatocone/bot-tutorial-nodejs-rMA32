@@ -45,7 +45,7 @@ function respond() {
   } 
   else if(request.text && botRegexSb.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/snd/"));
+    postMessage("http://daddyleagues.com/snd/");
     this.res.end();
   } 
   else {

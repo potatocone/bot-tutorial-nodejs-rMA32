@@ -8,6 +8,7 @@ function respond() {
       botRegex = /^\/cool guy/; botRegexDL = /^\/DDL/i; botRegexRules = /^\/rules/
       botRegexAd=/^\/advance/; botRegexSC = /^\/SDL/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/daddy/;
+      botRegexSt = /^\/standings/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -46,6 +47,11 @@ function respond() {
   else if(request.text && botRegexSb.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/snd/");
+    this.res.end();
+  } 
+  else if(request.text && botRegexSt.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/snd/standings/league");
     this.res.end();
   } 
   else {

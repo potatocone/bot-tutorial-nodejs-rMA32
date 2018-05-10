@@ -6,8 +6,8 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/coolguy/; botDuck = /^\/ducking/; botRegexstaymaj = /^\/staymaj/; botRegexmaj = /^\/maj/; botRegexethan = /^\/ethan/;
-      botRegexdaddy = /^\/call me daddy/; botRegexjose = /^\/jose's girl/; botRegexgkys = /^\/gkys/; botRegexDeal = /^\/dealwithit/;
-      botRegexDeals = /^\/dealwitit/; botRegexBeatit = /^\/beatit/; botRegexboobs = /^\/boobs/;
+      botRegexdaddy = /^\/call me daddy/; botRegexjose = /^\/jose's girl/; botRegexgkys = /^\/gkys/; botRegexDeals = /^\/dealwithit/;
+      botRegexDeal = /^\/booty/; botRegexBeatit = /^\/beatit/; botRegexboobs = /^\/boobs/;
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -75,10 +75,7 @@ function respond() {
   }
   else if(request.text && botRegexDeal.test(request.text)) {
     this.res.writeHead(200);
-  if(1.0 >= Math.random() > 0.3)
-      postMessage("https://heavyeditorial.files.wordpress.com/2014/03/deal-with-it23.gif");
-    else
-      postMessage("https://heavyeditorial.files.wordpress.com/2014/03/deal-with-it-bra.gif")
+    postMessage("https://i.groupme.com/720x960.jpeg.08ff546b53904b6db15bc2c08a5f1f80");
     this.res.end();
   }
   

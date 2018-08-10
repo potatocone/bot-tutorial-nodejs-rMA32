@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/coolguy/; botDuck = /^\/ducking/; botRegexstaymaj = /^\/staymaj/; botRegexmaj = /^\/maj/; botRegexethan = /^\/ethan/;
       botRegexdaddy = /^\/call me daddy/; botRegexjose = /^\/jose's girl/; botRegexgkys = /^\/gkys/; botRegexDeals = /^\/dealwithit/;
-      botRegexDeal = /^\/booty/; botRegexBeatit = /^\/beatit/; botRegexboobs = /^\/boobs/;
+      botRegexDeal = /^\/booties/; botRegexBeatit = /^\/beatit/; botRegexboobs = /^\/boobies/;
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
